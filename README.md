@@ -1,2 +1,3 @@
 # Greebler
-A Swift Package from Dunesailer Research for working with greebles.
+
+A description of this package.
