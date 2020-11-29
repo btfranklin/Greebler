@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Aesthete",
+        "repositoryURL": "https://github.com/dunesailer/Aesthete.git",
+        "state": {
+          "branch": null,
+          "revision": "905bd1cadb768fcd381aebf23091e286f709714d",
+          "version": "0.4.0"
+        }
+      },
+      {
+        "package": "Dunesailer Utilities",
+        "repositoryURL": "https://github.com/dunesailer/Utilities.git",
+        "state": {
+          "branch": null,
+          "revision": "32e060904e41301183d5a0a6ee88cb67c0a2f56b",
+          "version": "0.8.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
