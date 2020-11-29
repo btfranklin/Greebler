@@ -22,8 +22,5 @@ let package = Package(
             name: "Greebler",
             dependencies: [.product(name: "DunesailerUtilities", package: "Dunesailer Utilities"),
                            .product(name: "Aesthete", package: "Aesthete")]),
-//        .testTarget(
-//            name: "GreeblerTests",
-//            dependencies: ["Greebler"]),
     ]
 )
