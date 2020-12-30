@@ -46,7 +46,7 @@ public struct VentGreebles: Greebles {
             
             context.setFillColor(themeCGColor)
             
-            if rect.width > rect.height {
+            if rect.orientation == .horizontal {
                 for slatX in stride(from: insetRect.minX-0.01, through: insetRect.maxX, by: 0.02) {
                     context.fill(CGRect(x: slatX, y: insetRect.minY, width: 0.01, height: insetRect.height))
                 }

@@ -105,6 +105,14 @@ hoseGreeblesOffSide.draw(on: context)
 context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output
 
 
+// Equipment greebles in isolation
+let equipmentGreebles = EquipmentGreebles(xUnits: 3, themeColor: grayThemeColor.hsbaColor, equipmentCount: 4)
+
+context = createGraphicsContext()
+equipmentGreebles.draw(on: context)
+context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output
+
+
 // A composite panel with rivets, vents, and lights
 let compositeGreebles1 = CompositeGreebles(greeblesAssortment: [
     panelGreebles, ventGreebles, lightPanelGreebles
@@ -132,4 +140,14 @@ let compositeGreebles3 = CompositeGreebles(greeblesAssortment: [
 
 context = createGraphicsContext()
 compositeGreebles3.draw(on: context)
+context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output
+
+
+// A composite panel with rivets, lights, equipment, and pipes
+let compositeGreebles4 = CompositeGreebles(greeblesAssortment: [
+    panelGreebles, lightPanelGreebles, equipmentGreebles, pipeGreebles
+])
+
+context = createGraphicsContext()
+compositeGreebles4.draw(on: context)
 context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output

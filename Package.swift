@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Dunesailer Utilities", url: "https://github.com/dunesailer/Utilities.git", from: "0.9.2"),
-        .package(name: "Aesthete", url: "https://github.com/dunesailer/Aesthete.git", from: "0.4.1"),
+        .package(name: "Aesthete", url: "https://github.com/dunesailer/Aesthete.git", from: "0.4.3"),
     ],
     targets: [
         .target(
