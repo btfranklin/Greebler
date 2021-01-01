@@ -113,6 +113,14 @@ equipmentGreebles.draw(on: context)
 context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output
 
 
+// Cutaway Section greebles in isolation
+let cutawaySectionGreebles = CutawaySectionGreebles(xUnits: 3, themeColor: grayThemeColor.hsbaColor, cutawayCount: 4)
+
+context = createGraphicsContext()
+cutawaySectionGreebles.draw(on: context)
+context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output
+
+
 // A composite panel with rivets, vents, and lights
 let compositeGreebles1 = CompositeGreebles(greeblesAssortment: [
     panelGreebles, ventGreebles, lightPanelGreebles
@@ -150,4 +158,14 @@ let compositeGreebles4 = CompositeGreebles(greeblesAssortment: [
 
 context = createGraphicsContext()
 compositeGreebles4.draw(on: context)
+context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output
+
+
+// A composite panel with rivets, cutaway sections, and equipment
+let compositeGreebles5 = CompositeGreebles(greeblesAssortment: [
+    panelGreebles, cutawaySectionGreebles, equipmentGreebles
+])
+
+context = createGraphicsContext()
+compositeGreebles5.draw(on: context)
 context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output

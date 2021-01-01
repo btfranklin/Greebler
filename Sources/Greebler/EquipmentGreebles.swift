@@ -58,7 +58,6 @@ public struct EquipmentGreebles: Greebles {
                                   height: height)
                 drawScatteredItems(on: context, in: rect, using: themeCGColor)
             }
-
         }
 
         context.restoreGState()
