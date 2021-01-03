@@ -16,18 +16,15 @@ public struct LightPanelGreebles: Greebles {
     public let lightColors: [HSBAColor]
     public let panelCount: Int
     
-    public init(xUnits: CGFloat = 1, yUnits: CGFloat = 1, themeColor: HSBAColor, lightColors: [HSBAColor]? = nil, panelCount: Int) {
+    public init(xUnits: CGFloat = 1,
+                yUnits: CGFloat = 1,
+                themeColor: HSBAColor,
+                lightColors: [HSBAColor] = [CGColor(red: 0, green: 1.0, blue: 0, alpha: 1.0).hsbaColor],
+                panelCount: Int) {
         self.xUnits = xUnits
         self.yUnits = yUnits
         self.themeColor = themeColor
-
-        if let lightColors = lightColors {
-            self.lightColors = lightColors
-        } else {
-            let hsbaGreen = CGColor.init(red: 0, green: 1.0, blue: 0, alpha: 1.0).hsbaColor
-            self.lightColors = [hsbaGreen]
-        }
-        
+        self.lightColors = lightColors
         self.panelCount = panelCount
     }
     
