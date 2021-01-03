@@ -11,7 +11,24 @@ final class HoseGreeblesTests: XCTestCase {
         let grayThemeColor = CGColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
         let graphicsContext = GreeblesTestUtil.createGraphicsContext()
 
-        let hoseGreebles = HoseGreebles(xUnits: 3, themeColor: grayThemeColor.hsbaColor, hoseCount: 3, allowOffSide: false)
-        hoseGreebles.draw(on: graphicsContext)
+        for unitSize in stride(from: CGFloat(1), through: CGFloat(1000), by: 10) {
+            for hoseCount in stride(from: 1, through: 100, by: 10) {
+                let hoseGreebles = HoseGreebles(xUnits: unitSize, yUnits: unitSize, themeColor: grayThemeColor.hsbaColor, hoseCount: hoseCount, allowOffSide: false)
+                hoseGreebles.draw(on: graphicsContext)
+            }
+        }
     }
+
+    func testDrawAllowOffSide() {
+        let grayThemeColor = CGColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+        let graphicsContext = GreeblesTestUtil.createGraphicsContext()
+
+        for unitSize in stride(from: CGFloat(1), through: CGFloat(1000), by: 10) {
+            for hoseCount in stride(from: 1, through: 100, by: 10) {
+                let hoseGreebles = HoseGreebles(xUnits: unitSize, yUnits: unitSize, themeColor: grayThemeColor.hsbaColor, hoseCount: hoseCount, allowOffSide: true)
+                hoseGreebles.draw(on: graphicsContext)
+            }
+        }
+    }
+
 }
