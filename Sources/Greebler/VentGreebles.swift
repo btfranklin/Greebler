@@ -10,7 +10,10 @@ public struct VentGreebles: Greebles {
     public let themeColor: HSBAColor
     public let ventCount: Int
     
-    public init(xUnits: CGFloat = 1, yUnits: CGFloat = 1, themeColor: HSBAColor, ventCount: Int) {
+    public init(xUnits: CGFloat = 1,
+                yUnits: CGFloat = 1,
+                themeColor: HSBAColor,
+                ventCount: Int) {
         self.xUnits = xUnits
         self.yUnits = yUnits
         self.themeColor = themeColor

@@ -44,7 +44,8 @@ public struct WireGreebles: Greebles {
     public let endPointPairCount: Int
     public let allowOffSide: Bool
 
-    public init(xUnits: CGFloat = 1, yUnits: CGFloat = 1,
+    public init(xUnits: CGFloat = 1,
+                yUnits: CGFloat = 1,
                 wireCount: Int,
                 wireColors: [CGColor] = [
                     CGColor(red: 0.5, green: 0, blue: 0, alpha: 1), // red

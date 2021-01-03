@@ -11,7 +11,10 @@ public struct EquipmentGreebles: Greebles {
     public let themeColor: HSBAColor
     public let equipmentCount: Int
 
-    public init(xUnits: CGFloat = 1, yUnits: CGFloat = 1, themeColor: HSBAColor, equipmentCount: Int) {
+    public init(xUnits: CGFloat = 1,
+                yUnits: CGFloat = 1,
+                themeColor: HSBAColor,
+                equipmentCount: Int) {
         self.xUnits = xUnits
         self.yUnits = yUnits
         self.themeColor = themeColor

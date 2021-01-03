@@ -11,7 +11,11 @@ public struct PanelGreebles: Greebles {
     public let panelCount: Int
     public let showRivets: Bool
     
-    public init(xUnits: CGFloat = 1, yUnits: CGFloat = 1, themeColor: HSBAColor, panelCount: Int, showRivets: Bool = false) {
+    public init(xUnits: CGFloat = 1,
+                yUnits: CGFloat = 1,
+                themeColor: HSBAColor,
+                panelCount: Int,
+                showRivets: Bool = false) {
         self.xUnits = xUnits
         self.yUnits = yUnits
         self.themeColor = themeColor
