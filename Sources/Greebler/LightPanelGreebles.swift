@@ -15,11 +15,11 @@ public struct LightPanelGreebles: Greebles {
     public let themeColor: HSBAColor
     public let lightColors: [HSBAColor]
     public let panelCount: Int
-    
+
     public init(xUnits: CGFloat = 1,
                 yUnits: CGFloat = 1,
                 themeColor: HSBAColor,
-                lightColors: [HSBAColor] = [CGColor(red: 0, green: 1.0, blue: 0, alpha: 1.0).hsbaColor],
+                lightColors: [HSBAColor] = [CGColor(#colorLiteral(red: 0, green: 1, blue: 0, alpha: 1)).hsbaColor],
                 panelCount: Int) {
         self.xUnits = xUnits
         self.yUnits = yUnits
@@ -32,7 +32,8 @@ public struct LightPanelGreebles: Greebles {
         context.saveGState()
         context.setAllowsAntialiasing(true)
 
-        var panels = [(rect: CGRect, columnCount: Int, rowCount: Int)]()
+        typealias Panel = (rect: CGRect, columnCount: Int, rowCount: Int)
+        var panels = [Panel]()
         
         for _ in 1...panelCount {
             
