@@ -28,7 +28,7 @@ var context = createGraphicsContext()
 capitalShipSurfaceGreebles.draw(on: context)
 context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output
 
-let equipmentStripGreebles = EquipmentStripGreebles(xUnits: 3, themeColor: grayThemeColor.hsbaColor)
+let equipmentStripGreebles = EquipmentTrenchGreebles(xUnits: 3, themeColor: grayThemeColor.hsbaColor, trenchWidth: 3)
 
 equipmentStripGreebles.draw(on: context)
 context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output

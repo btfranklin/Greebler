@@ -13,6 +13,7 @@ public struct HoseGreebles: Greebles {
         init(xUnits: CGFloat = 1,
              yUnits: CGFloat = 1,
              allowOffSide: Bool) {
+
             let insetRect = CGRect(x: 0, y: 0, width: xUnits, height: yUnits).insetBy(dx: 0.1, dy: 0.1)
             let outsetRect = CGRect(x: 0, y: 0, width: xUnits, height: yUnits).insetBy(dx: -0.3, dy: -0.3)
             var endPoints = [CGPoint]()
