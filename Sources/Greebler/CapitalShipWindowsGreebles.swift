@@ -47,7 +47,7 @@ public struct CapitalShipWindowsGreebles: Greebles {
 
         for _ in 1...windowZoneCount {
 
-            let columnCount = Int.random(in: 3...100)
+            let columnCount = Int.random(in: 3...(60*Int(xUnits.rounded())))
             let rowCount = [1, 1, 1, 2, 2, 3, 3, 3, 4, 5].randomElement()!
 
             let rectWidth = (CGFloat(columnCount) * CapitalShipWindowsGreebles.WINDOW_SIZE)
