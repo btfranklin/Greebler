@@ -19,7 +19,8 @@ func createGraphicsContext() -> CGContext {
 }
 
 // Some color constants to use later
-let grayThemeColor = CGColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+let grayThemeColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+let blueThemeColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
 
 
 let capitalShipSurfaceGreebles = CapitalShipSurfaceGreebles(xUnits: 3, themeColor: grayThemeColor.hsbaColor)
@@ -28,7 +29,26 @@ var context = createGraphicsContext()
 capitalShipSurfaceGreebles.draw(on: context)
 context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output
 
-let equipmentStripGreebles = EquipmentTrenchGreebles(xUnits: 3, themeColor: grayThemeColor.hsbaColor, trenchWidth: 3)
 
-equipmentStripGreebles.draw(on: context)
+
+let capitalShipWindowsGreebles = CapitalShipWindowsGreebles(xUnits: 3, themeColor: grayThemeColor.hsbaColor)
+
+capitalShipWindowsGreebles.draw(on: context)
+context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output
+
+
+
+let capitalShipBlueThemedWindowsGreebles = CapitalShipWindowsGreebles(xUnits: 3,
+                                                                      themeColor: blueThemeColor.hsbaColor,
+                                                                      windowZoneCount: 1,
+                                                                      windowColor: CapitalShipWindowsGreebles.AMBER_INTERIOR_LIGHT_COLOR)
+
+capitalShipBlueThemedWindowsGreebles.draw(on: context)
+context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output
+
+
+
+let equipmentTrenchGreebles = EquipmentTrenchGreebles(xUnits: 3, themeColor: grayThemeColor.hsbaColor, trenchWidth: 3)
+
+equipmentTrenchGreebles.draw(on: context)
 context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output
