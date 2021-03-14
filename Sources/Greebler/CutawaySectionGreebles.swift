@@ -16,7 +16,7 @@ public struct CutawaySectionGreebles: Drawable, Codable, Hashable {
                 yUnits: CGFloat = 1,
                 themeColor: HSBAColor,
                 cutawayCount: Int,
-                backlightColor: HSBAColor = CGColor(red: 0.8, green: 0, blue: 0, alpha: 1.0).hsbaColor) {
+                backlightColor: HSBAColor = CGColor(#colorLiteral(red: 0.8, green: 0, blue: 0, alpha: 1.0)).hsbaColor) {
         self.xUnits = xUnits
         self.yUnits = yUnits
         self.themeColor = themeColor

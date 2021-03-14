@@ -49,12 +49,12 @@ public struct WireGreebles: Drawable, Codable, Hashable {
                 yUnits: CGFloat = 1,
                 wireCount: Int,
                 wireColors: [HSBAColor] = [
-                    CGColor(red: 0.5, green: 0, blue: 0, alpha: 1).hsbaColor, // red
-                    CGColor(red: 0, green: 0, blue: 0.5, alpha: 1).hsbaColor, // blue
-                    CGColor(red: 0, green: 0.5, blue: 0, alpha: 1).hsbaColor, // green
-                    CGColor(red: 0.6, green: 0.6, blue: 0, alpha: 1).hsbaColor, // yellow
-                    CGColor(red: 0.7, green: 0.4, blue: 0, alpha: 1).hsbaColor, // orange
-                    CGColor.black.hsbaColor],
+                    CGColor(#colorLiteral(red: 0.5, green: 0, blue: 0, alpha: 1)).hsbaColor, // red
+                    CGColor(#colorLiteral(red: 0, green: 0, blue: 0.5, alpha: 1)).hsbaColor, // blue
+                    CGColor(#colorLiteral(red: 0, green: 0.5, blue: 0, alpha: 1)).hsbaColor, // green
+                    CGColor(#colorLiteral(red: 0.6, green: 0.6, blue: 0, alpha: 1)).hsbaColor, // yellow
+                    CGColor(#colorLiteral(red: 0.7, green: 0.4, blue: 0, alpha: 1)).hsbaColor, // orange
+                    CGColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).hsbaColor], // black
                 endPointPairCount: Int = 1,
                 allowOffSide: Bool = true) {
         self.xUnits = xUnits
