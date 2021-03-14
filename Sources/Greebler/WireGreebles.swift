@@ -2,8 +2,9 @@
 
 import CoreGraphics
 import DunesailerUtilities
+import Aesthete
 
-public struct WireGreebles: Greebles {
+public struct WireGreebles: Drawable {
     
     private struct Wire {
         let path: CGPath

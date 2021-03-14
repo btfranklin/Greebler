@@ -4,7 +4,7 @@ import CoreGraphics
 import DunesailerUtilities
 import Aesthete
 
-public struct LightPanelGreebles: Greebles {
+public struct LightPanelGreebles: Drawable {
     
     static private let LIGHT_INSET: CGFloat = 0.01
     static private let LIGHT_PADDING: CGFloat = 0.007

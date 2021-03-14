@@ -3,7 +3,7 @@
 import CoreGraphics
 import Aesthete
 
-public struct PanelGreebles: Greebles {
+public struct PanelGreebles: Drawable {
     
     public let xUnits: CGFloat
     public let yUnits: CGFloat

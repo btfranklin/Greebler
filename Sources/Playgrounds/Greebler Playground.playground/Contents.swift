@@ -1,5 +1,6 @@
 import PlaygroundSupport
 import Cocoa
+import Aesthete
 import Greebler
 
 // Prepare a graphics context
@@ -122,7 +123,7 @@ context.makeImage()! // Click "Show Result" or "Quick Look" button to view rende
 
 
 // A composite panel with rivets, vents, and lights
-let compositeGreebles1 = CompositeGreebles(greeblesAssortment: [
+let compositeGreebles1 = CompositeDrawable(drawables: [
     panelGreebles, ventGreebles, lightPanelGreebles
 ])
 
@@ -132,7 +133,7 @@ context.makeImage()! // Click "Show Result" or "Quick Look" button to view rende
 
 
 // A composite panel with rivets, lights, pipes, and hoses
-let compositeGreebles2 = CompositeGreebles(greeblesAssortment: [
+let compositeGreebles2 = CompositeDrawable(drawables: [
     panelGreebles, lightPanelGreebles, pipeGreebles, hoseGreebles
 ])
 
@@ -142,7 +143,7 @@ context.makeImage()! // Click "Show Result" or "Quick Look" button to view rende
 
 
 // A composite panel with rivets, lights, pipes, and wires
-let compositeGreebles3 = CompositeGreebles(greeblesAssortment: [
+let compositeGreebles3 = CompositeDrawable(drawables: [
     panelGreebles, lightPanelGreebles, pipeGreebles, wireGreebles
 ])
 
@@ -152,7 +153,7 @@ context.makeImage()! // Click "Show Result" or "Quick Look" button to view rende
 
 
 // A composite panel with rivets, lights, equipment, and pipes
-let compositeGreebles4 = CompositeGreebles(greeblesAssortment: [
+let compositeGreebles4 = CompositeDrawable(drawables: [
     panelGreebles, lightPanelGreebles, equipmentGreebles, pipeGreebles
 ])
 
@@ -162,7 +163,7 @@ context.makeImage()! // Click "Show Result" or "Quick Look" button to view rende
 
 
 // A composite panel with rivets, cutaway sections, and equipment
-let compositeGreebles5 = CompositeGreebles(greeblesAssortment: [
+let compositeGreebles5 = CompositeDrawable(drawables: [
     panelGreebles, cutawaySectionGreebles, equipmentGreebles
 ])
 

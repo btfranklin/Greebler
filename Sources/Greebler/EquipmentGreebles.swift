@@ -4,7 +4,7 @@ import CoreGraphics
 import DunesailerUtilities
 import Aesthete
 
-public struct EquipmentGreebles: Greebles {
+public struct EquipmentGreebles: Drawable {
 
     public let xUnits: CGFloat
     public let yUnits: CGFloat
