@@ -4,7 +4,7 @@ import CoreGraphics
 import DunesailerUtilities
 import Aesthete
 
-public struct WireGreebles: Drawable {
+public struct WireGreebles: Drawable, Codable, Hashable {
     
     private struct Wire {
         let path: CGPath
@@ -41,20 +41,20 @@ public struct WireGreebles: Drawable {
     public let xUnits: CGFloat
     public let yUnits: CGFloat
     public let wireCount: Int
-    public let wireColors: [CGColor]
+    public let wireColors: [HSBAColor]
     public let endPointPairCount: Int
     public let allowOffSide: Bool
 
     public init(xUnits: CGFloat = 1,
                 yUnits: CGFloat = 1,
                 wireCount: Int,
-                wireColors: [CGColor] = [
-                    CGColor(red: 0.5, green: 0, blue: 0, alpha: 1), // red
-                    CGColor(red: 0, green: 0, blue: 0.5, alpha: 1), // blue
-                    CGColor(red: 0, green: 0.5, blue: 0, alpha: 1), // green
-                    CGColor(red: 0.6, green: 0.6, blue: 0, alpha: 1), // yellow
-                    CGColor(red: 0.7, green: 0.4, blue: 0, alpha: 1), // orange
-                    .black],
+                wireColors: [HSBAColor] = [
+                    CGColor(red: 0.5, green: 0, blue: 0, alpha: 1).hsbaColor, // red
+                    CGColor(red: 0, green: 0, blue: 0.5, alpha: 1).hsbaColor, // blue
+                    CGColor(red: 0, green: 0.5, blue: 0, alpha: 1).hsbaColor, // green
+                    CGColor(red: 0.6, green: 0.6, blue: 0, alpha: 1).hsbaColor, // yellow
+                    CGColor(red: 0.7, green: 0.4, blue: 0, alpha: 1).hsbaColor, // orange
+                    CGColor.black.hsbaColor],
                 endPointPairCount: Int = 1,
                 allowOffSide: Bool = true) {
         self.xUnits = xUnits
@@ -128,7 +128,8 @@ public struct WireGreebles: Drawable {
             context.setLineCap(.round)
             context.setLineJoin(.round)
             context.setLineWidth(0.005)
-            context.setStrokeColor(wireColors.randomElement()!)
+            let wireColor = wireColors.randomElement()!
+            context.setStrokeColor(.create(from: wireColor))
             context.addPath(wire.path)
             context.strokePath()
             

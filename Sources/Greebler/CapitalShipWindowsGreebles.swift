@@ -3,7 +3,7 @@
 import CoreGraphics
 import Aesthete
 
-public struct CapitalShipWindowsGreebles: Drawable {
+public struct CapitalShipWindowsGreebles: Drawable, Codable, Hashable {
 
     static public let BLUE_INTERIOR_LIGHT_COLOR = CGColor(#colorLiteral(red: 0.6721253958, green: 0.9103467933, blue: 1, alpha: 1)).hsbaColor
     static public let AMBER_INTERIOR_LIGHT_COLOR = CGColor(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)).hsbaColor

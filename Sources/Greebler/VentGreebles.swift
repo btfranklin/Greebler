@@ -3,7 +3,7 @@
 import CoreGraphics
 import Aesthete
 
-public struct VentGreebles: Drawable {
+public struct VentGreebles: Drawable, Codable, Hashable {
     
     public let xUnits: CGFloat
     public let yUnits: CGFloat

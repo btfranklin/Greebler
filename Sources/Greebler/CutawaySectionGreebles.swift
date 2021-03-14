@@ -4,7 +4,7 @@ import CoreGraphics
 import DunesailerUtilities
 import Aesthete
 
-public struct CutawaySectionGreebles: Drawable {
+public struct CutawaySectionGreebles: Drawable, Codable, Hashable {
 
     public let xUnits: CGFloat
     public let yUnits: CGFloat

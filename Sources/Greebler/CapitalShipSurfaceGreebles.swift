@@ -3,7 +3,7 @@
 import CoreGraphics
 import Aesthete
 
-public struct CapitalShipSurfaceGreebles: Drawable {
+public struct CapitalShipSurfaceGreebles: Drawable, Codable, Hashable {
 
     public let xUnits: CGFloat
     public let yUnits: CGFloat

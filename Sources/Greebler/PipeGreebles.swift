@@ -4,7 +4,7 @@ import CoreGraphics
 import DunesailerUtilities
 import Aesthete
 
-public struct PipeGreebles: Drawable {
+public struct PipeGreebles: Drawable, Codable, Hashable {
     
     private struct Pipe {
         let path: CGPath
