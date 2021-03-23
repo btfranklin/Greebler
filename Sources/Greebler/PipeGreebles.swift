@@ -125,7 +125,7 @@ public struct PipeGreebles: Drawable, Codable, Hashable {
         context.saveGState()
         context.setAllowsAntialiasing(true)
         
-        var pipes = [Pipe]()
+        var pipes: [Pipe] = []
         for _ in 1...pipeCount {
             pipes.append(Pipe(xUnits: xUnits, yUnits: yUnits, allowOffSide: allowOffSide));
         }

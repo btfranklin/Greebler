@@ -62,7 +62,7 @@ public struct HoseGreebles: Drawable, Codable, Hashable {
         context.saveGState()
         context.setAllowsAntialiasing(true)
         
-        var hoses = [Hose]()
+        var hoses: [Hose] = []
         for _ in 1...hoseCount {
             hoses.append(Hose(xUnits: xUnits, yUnits: yUnits, allowOffSide: allowOffSide));
         }

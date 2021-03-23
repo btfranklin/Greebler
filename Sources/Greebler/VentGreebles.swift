@@ -25,7 +25,7 @@ public struct VentGreebles: Drawable, Codable, Hashable {
         
         context.setAllowsAntialiasing(false)
 
-        var rects = [CGRect]()
+        var rects: [CGRect] = []
         
         for _ in 1...ventCount {
             rects.append(CGRect(x: CGFloat.random(in: 0.0...xUnits - 0.1),

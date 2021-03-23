@@ -43,7 +43,7 @@ public struct CapitalShipWindowsGreebles: Drawable, Codable, Hashable {
 
         context.setAllowsAntialiasing(false)
 
-        var windowZones = [WindowZone]()
+        var windowZones: [WindowZone] = []
 
         for _ in 1...windowZoneCount {
 

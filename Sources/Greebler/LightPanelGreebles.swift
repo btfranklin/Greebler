@@ -33,7 +33,7 @@ public struct LightPanelGreebles: Drawable, Codable, Hashable {
         context.setAllowsAntialiasing(true)
 
         typealias Panel = (rect: CGRect, columnCount: Int, rowCount: Int)
-        var panels = [Panel]()
+        var panels: [Panel] = []
         
         for _ in 1...panelCount {
             

@@ -11,7 +11,7 @@ public struct WireGreebles: Drawable, Codable, Hashable {
         let endPoints: [CGPoint]
         
         init(endPointZones: (start: CGPoint, end: CGPoint)) {
-            var endPoints = [CGPoint]()
+            var endPoints: [CGPoint] = []
             
             let startX = CGFloat(endPointZones.start.x) + CGFloat.random(in: -0.05...0.05)
             let startY = CGFloat(endPointZones.start.y) + CGFloat.random(in: -0.05...0.05)
@@ -82,7 +82,7 @@ public struct WireGreebles: Drawable, Codable, Hashable {
             endPointZoneOptions.append( (start: startingPoint, end: endingPoint) )
         }
         
-        var wires = [Wire]()
+        var wires: [Wire] = []
         for _ in 1...wireCount {
             wires.append(Wire(endPointZones: endPointZoneOptions.randomElement()!));
         }
