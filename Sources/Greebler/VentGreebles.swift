@@ -34,7 +34,7 @@ public struct VentGreebles: Drawable, Codable, Hashable {
                                 height: CGFloat.random(in: 0.05...0.3)))
         }
 
-        let themeCGColor = CGColor.create(from: themeColor)
+        let themeCGColor = CGColor.make(hsbaColor: themeColor)
         for rect in rects {
             
             context.setLineWidth(0.001)

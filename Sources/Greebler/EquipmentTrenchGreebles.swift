@@ -40,8 +40,8 @@ public struct EquipmentTrenchGreebles: Drawable, Codable, Hashable {
         context.scaleBy(x: scaleFactor, y: scaleFactor)
 
         let equipmentTrenchRect = CGRect(x: 0, y: 0.05, width: xUnits/scaleFactor, height: trenchWidth)
-        let trenchColor = themeColor.brightnessAdjusted(by: -0.3)
-        context.setFillColor(CGColor.create(from: trenchColor))
+        let trenchColor = themeColor.withBrightness(adjustedBy: -0.3)
+        context.setFillColor(CGColor.make(hsbaColor: trenchColor))
         context.fill(equipmentTrenchRect)
 
         context.clip(to: equipmentTrenchRect)

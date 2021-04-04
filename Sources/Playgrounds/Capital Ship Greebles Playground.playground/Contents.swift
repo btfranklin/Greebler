@@ -3,7 +3,7 @@ import Cocoa
 import Greebler
 
 // Prepare a graphics context
-func createGraphicsContext() -> CGContext {
+func makeGraphicsContext() -> CGContext {
     let fullRect = CGRect(origin: .zero, size: CGSize(width: 1500, height: 500))
     guard let context = CGContext(data: nil,
                                   width: Int(fullRect.width),
@@ -25,7 +25,7 @@ let blueThemeColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue:
 
 let capitalShipSurfaceGreebles = CapitalShipSurfaceGreebles(xUnits: 3, themeColor: grayThemeColor.hsbaColor)
 
-var context = createGraphicsContext()
+var context = makeGraphicsContext()
 capitalShipSurfaceGreebles.draw(on: context)
 context.makeImage()! // Click "Show Result" or "Quick Look" button to view rendered output
 

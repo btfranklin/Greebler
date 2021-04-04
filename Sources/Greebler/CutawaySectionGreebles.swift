@@ -29,8 +29,8 @@ public struct CutawaySectionGreebles: Drawable, Codable, Hashable {
 
         context.setAllowsAntialiasing(true)
 
-        let innardsFillColor = themeColor.brightnessAdjusted(by: -0.2)
-        let backlightCGColor = CGColor.create(from: backlightColor)
+        let innardsFillColor = themeColor.withBrightness(adjustedBy: -0.2)
+        let backlightCGColor = CGColor.make(hsbaColor: backlightColor)
         context.setLineWidth(0.001)
         context.setStrokeColor(.black)
 

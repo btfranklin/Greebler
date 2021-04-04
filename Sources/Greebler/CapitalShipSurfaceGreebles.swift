@@ -23,13 +23,13 @@ public struct CapitalShipSurfaceGreebles: Drawable, Codable, Hashable {
         context.saveGState()
         context.setAllowsAntialiasing(false)
 
-        context.setFillColor(CGColor.create(from: themeColor))
+        context.setFillColor(CGColor.make(hsbaColor: themeColor))
         context.fill(drawingRect)
 
         let coverageArea = Int(xUnits * yUnits)
         for _ in 1...(coverageArea * 200) {
-            let panelColor = themeColor.saturationAdjusted(by: CGFloat.random(in: -0.05...0.05))
-            context.setFillColor(CGColor.create(from: panelColor))
+            let panelColor = themeColor.withSaturation(adjustedBy: CGFloat.random(in: -0.05...0.05))
+            context.setFillColor(CGColor.make(hsbaColor: panelColor))
 
             let panelRect = CGRect(x: CGFloat.random(in: 0..<xUnits),
                                    y: CGFloat.random(in: 0..<yUnits),

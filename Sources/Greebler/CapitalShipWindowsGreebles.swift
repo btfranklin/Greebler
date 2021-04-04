@@ -75,10 +75,10 @@ public struct CapitalShipWindowsGreebles: Drawable, Codable, Hashable {
             }
 
             context.saveGState()
-            context.setFillColor(CGColor.create(from: windowColor))
+            context.setFillColor(CGColor.make(hsbaColor: windowColor))
             context.setShadow(offset: CGSize(width: 0, height: 0),
                               blur: 8,
-                              color: CGColor.create(from: windowColor))
+                              color: CGColor.make(hsbaColor: windowColor))
 
             for column in 0..<windowZone.columnCount {
                 for row in 0..<windowZone.rowCount {
@@ -107,8 +107,8 @@ public struct CapitalShipWindowsGreebles: Drawable, Codable, Hashable {
     private func drawFlat(_ windowZone: WindowZone, on context: CGContext) {
         context.saveGState()
 
-        let strokeColor = CGColor.create(from: themeColor.brightnessAdjusted(by: -0.1))
-        let backgroundColor = CGColor.create(from: themeColor)
+        let strokeColor = CGColor.make(hsbaColor: themeColor.withBrightness(adjustedBy: -0.1))
+        let backgroundColor = CGColor.make(hsbaColor: themeColor)
 
         context.setLineWidth(0.002)
         context.setStrokeColor(strokeColor)
@@ -124,7 +124,7 @@ public struct CapitalShipWindowsGreebles: Drawable, Codable, Hashable {
 
         let zoneRect = windowZone.rect
 
-        let backgroundColor = CGColor.create(from: themeColor.saturationAdjusted(by: -0.2).brightnessAdjusted(by: -0.2))
+        let backgroundColor = CGColor.make(hsbaColor: themeColor.withSaturation(adjustedBy: -0.2).withBrightness(adjustedBy: -0.2))
 
         context.setFillColor(backgroundColor)
         context.fill(zoneRect)

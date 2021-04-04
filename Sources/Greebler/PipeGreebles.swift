@@ -145,7 +145,7 @@ public struct PipeGreebles: Drawable, Codable, Hashable {
                                           y: endPoint2.y-endpointRadius,
                                           width: endpointRadius*2,
                                           height: endpointRadius*2))
-            context.setFillColor(CGColor.create(from: themeColor.saturationAdjusted(by: -0.25)))
+            context.setFillColor(CGColor.make(hsbaColor: themeColor.withSaturation(adjustedBy: -0.25)))
             context.fillPath()
             
             context.addEllipse(in: CGRect(x: endPoint1.x-endpointRadius,
@@ -164,7 +164,7 @@ public struct PipeGreebles: Drawable, Codable, Hashable {
         }
 
         // Now draw all the actual pipes
-        let themeCGColor = CGColor.create(from: themeColor.saturationAdjusted(by: 0.1))
+        let themeCGColor = CGColor.make(hsbaColor: themeColor.withSaturation(adjustedBy: 0.1))
         var pipeNumber: CGFloat = 1.0
         for pipe in pipes {
             context.saveGState()

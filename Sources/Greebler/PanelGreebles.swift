@@ -33,8 +33,8 @@ public struct PanelGreebles: Drawable, Codable, Hashable {
         let rects = CGRect(x: 0.0, y: 0.0, width: xUnits, height: yUnits).randomlyDivided(into: panelCount)
         
         for rect in rects {
-            let panelColor = themeColor.saturationAdjusted(by: CGFloat.random(in: -0.1...0.1))
-            context.setFillColor(CGColor.create(from: panelColor))
+            let panelColor = themeColor.withSaturation(adjustedBy: CGFloat.random(in: -0.1...0.1))
+            context.setFillColor(CGColor.make(hsbaColor: panelColor))
             context.fill(rect)
             context.stroke(rect)
             

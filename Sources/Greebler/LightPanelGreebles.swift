@@ -54,7 +54,7 @@ public struct LightPanelGreebles: Drawable, Codable, Hashable {
             panels.append( (rect: rect, columnCount: columnCount, rowCount: rowCount) )
         }
         
-        let backgroundColor = CGColor.create(from: themeColor.brightnessAdjusted(by: -0.1))
+        let backgroundColor = CGColor.make(hsbaColor: themeColor.withBrightness(adjustedBy: -0.1))
         for panel in panels {
             
             context.setLineWidth(0.002)
@@ -69,7 +69,7 @@ public struct LightPanelGreebles: Drawable, Codable, Hashable {
                     
                     if Bool.random(probability: 33) {
 
-                        let lightColor = CGColor.create(from: lightColors.randomElement()!)
+                        let lightColor = CGColor.make(hsbaColor: lightColors.randomElement()!)
                         context.setFillColor(lightColor)
                         
                         let lightX = panel.rect.minX + LightPanelGreebles.LIGHT_INSET

@@ -129,7 +129,7 @@ public struct WireGreebles: Drawable, Codable, Hashable {
             context.setLineJoin(.round)
             context.setLineWidth(0.005)
             let wireColor = wireColors.randomElement()!
-            context.setStrokeColor(.create(from: wireColor))
+            context.setStrokeColor(.make(hsbaColor: wireColor))
             context.addPath(wire.path)
             context.strokePath()
             

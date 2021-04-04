@@ -26,7 +26,7 @@ public struct EquipmentGreebles: Drawable, Codable, Hashable {
         
         context.setAllowsAntialiasing(true)
 
-        let themeCGColor = CGColor.create(from: themeColor)
+        let themeCGColor = CGColor.make(hsbaColor: themeColor)
         context.setFillColor(themeCGColor)
         context.setLineWidth(0.001)
         context.setStrokeColor(.black)
@@ -69,8 +69,8 @@ public struct EquipmentGreebles: Drawable, Codable, Hashable {
     private func drawRowOfItems(on context: CGContext, in rect: CGRect, using themeColor: CGColor) {
         context.saveGState()
 
-        let adjustedColor = themeColor.hsbaColor.brightnessAdjusted(by: 0.1)
-        context.setFillColor(CGColor.create(from: adjustedColor))
+        let adjustedColor = themeColor.hsbaColor.withBrightness(adjustedBy: 0.1)
+        context.setFillColor(CGColor.make(hsbaColor: adjustedColor))
 
         let itemCount = Bool.random(probability: 80) ? 3 : 5
         let useRoundItems = Bool.random()
@@ -137,8 +137,8 @@ public struct EquipmentGreebles: Drawable, Codable, Hashable {
             context.stroke(rect)
         }
 
-        let adjustedColor = themeColor.hsbaColor.brightnessAdjusted(by: 0.1)
-        context.setFillColor(CGColor.create(from: adjustedColor))
+        let adjustedColor = themeColor.hsbaColor.withBrightness(adjustedBy: 0.1)
+        context.setFillColor(CGColor.make(hsbaColor: adjustedColor))
         context.setShadow(offset: CGSize(width: 12, height: -6), blur: 12)
 
         for _ in 1...Int.random(in: 5...30) {
@@ -172,8 +172,8 @@ public struct EquipmentGreebles: Drawable, Codable, Hashable {
             context.stroke(rect)
         }
 
-        let adjustedColor = themeColor.hsbaColor.brightnessAdjusted(by: 0.1)
-        context.setFillColor(CGColor.create(from: adjustedColor))
+        let adjustedColor = themeColor.hsbaColor.withBrightness(adjustedBy: 0.1)
+        context.setFillColor(CGColor.make(hsbaColor: adjustedColor))
         context.setShadow(offset: CGSize(width: 12, height: -6), blur: 12)
         
         var itemRect: CGRect

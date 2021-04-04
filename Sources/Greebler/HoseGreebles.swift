@@ -68,7 +68,7 @@ public struct HoseGreebles: Drawable, Codable, Hashable {
         }
         
         // Draw all the endpoints first
-        let fixtureColor = CGColor.create(from: themeColor.saturationAdjusted(by: -0.25))
+        let fixtureColor = CGColor.make(hsbaColor: themeColor.withSaturation(adjustedBy: -0.25))
         let endpointRadius = CGFloat(0.04)
         for hose in hoses {
             context.saveGState()
@@ -102,7 +102,7 @@ public struct HoseGreebles: Drawable, Codable, Hashable {
         }
 
         // Now draw all the actual hoses
-        let hoseColor = CGColor.create(from: themeColor.brightnessAdjusted(by: -0.4))
+        let hoseColor = CGColor.make(hsbaColor: themeColor.withBrightness(adjustedBy: -0.4))
         context.setShadow(offset: CGSize(width: 12, height: -6), blur: 12)
         for hose in hoses {
             context.saveGState()
