@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "Greebler",
     platforms: [
-        .macOS(.v10_15), .iOS(.v13),
+        .macOS(.v11), .iOS(.v14), .tvOS(.v14), .watchOS(.v7)
     ],
     products: [
         .library(
@@ -14,14 +14,21 @@ let package = Package(
             targets: ["Greebler"]),
     ],
     dependencies: [
-        .package(name: "Dunesailer Utilities", url: "https://github.com/dunesailer/Utilities.git", from: "2.0.2"),
-        .package(name: "Aesthete", url: "https://github.com/dunesailer/Aesthete.git", from: "0.9.0"),
+        .package(name: "Dunesailer Utilities",
+                 url: "https://github.com/dunesailer/Utilities.git",
+                 from: "2.0.6"),
+        .package(name: "Aesthete",
+                 url: "https://github.com/dunesailer/Aesthete.git",
+                 from: "1.2.0"),
     ],
     targets: [
         .target(
             name: "Greebler",
-            dependencies: [.product(name: "DunesailerUtilities", package: "Dunesailer Utilities"),
-                           .product(name: "Aesthete", package: "Aesthete")]),
+            dependencies: [
+                .product(name: "DunesailerUtilities",
+                         package: "Dunesailer Utilities"),
+                .product(name: "Aesthete",
+                         package: "Aesthete")]),
         .testTarget(
             name: "GreeblerTests",
             dependencies: ["Greebler"]),
