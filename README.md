@@ -8,15 +8,7 @@ Greebler
 [![GitHub tag](https://img.shields.io/github/tag/dunesailer/Greebler.svg)](https://github.com/dunesailer/Greebler)
 [![build](https://github.com/dunesailer/Greebler/workflows/build/badge.svg)](https://github.com/dunesailer/Greebler/actions?query=workflow%3Abuild)
 
-Dunesailer Research's `Greebler` package contains utilities to assist in working with greebles, also called nurnies. One of the primary design goals of the project is to avoid using any pre-generated images, so all the greebles are created procedurally using drawing operations as needed.
-
-## Installation
-
-To install the Swift Package, please follow the steps below:
-
-- Add `https://github.com/dunesailer/Greebler` as a [Swift Package Manager](https://swift.org/package-manager/) dependency to your project.
-- When asked to **Choose Package Options**, use the default settings provided by Xcode.
-- When asked to **Add Package**, add `Greebler` to your desired target(s).
+The `Greebler` package contains utilities to assist in working with greebles, also called nurnies. One of the primary design goals of the project is to avoid using any pre-generated images, so all the greebles are created procedurally using drawing operations as needed.
 
 ## Playgrounds
 
