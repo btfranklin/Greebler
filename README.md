@@ -3,7 +3,7 @@ Greebler
 
 [![Platforms](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fbtfranklin%2FGreebler%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/btfranklin/Greebler)
 [![Swift versions](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fbtfranklin%2FGreebler%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/btfranklin/Greebler)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/dunesailer/Greebler/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/btfranklin/Greebler/blob/main/LICENSE)
 [![Swift Package Manager compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg?style=flat&colorA=28a745&&colorB=4E4E4E)](https://github.com/apple/swift-package-manager)
 [![GitHub tag](https://img.shields.io/github/tag/btfranklin/Greebler.svg)](https://github.com/btfranklin/Greebler)
 [![build](https://github.com/btfranklin/Greebler/workflows/build/badge.svg)](https://github.com/btfranklin/Greebler/actions?query=workflow%3Abuild)
