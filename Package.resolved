@@ -3,20 +3,20 @@
     "pins": [
       {
         "package": "Aesthete",
-        "repositoryURL": "https://github.com/dunesailer/Aesthete.git",
+        "repositoryURL": "https://github.com/btfranklin/Aesthete.git",
         "state": {
           "branch": null,
-          "revision": "8167309e2c42bc34001a61c2277651c30d0e3aaa",
-          "version": "1.2.0"
+          "revision": "083e17ef814a78f2c55e577d4ff884db8edba73f",
+          "version": "1.5.1"
         }
       },
       {
-        "package": "Utilities",
-        "repositoryURL": "https://github.com/dunesailer/Utilities.git",
+        "package": "ControlledChaos",
+        "repositoryURL": "https://github.com/btfranklin/ControlledChaos",
         "state": {
           "branch": null,
-          "revision": "ff130ed7342410a41286d1897b438851aadbcfc0",
-          "version": "2.0.6"
+          "revision": "4b5476d112f2d92f76579e021210073cd9060e14",
+          "version": "1.1.1"
         }
       }
     ]

@@ -14,19 +14,14 @@ let package = Package(
             targets: ["Greebler"]),
     ],
     dependencies: [
-        .package(name: "Dunesailer Utilities",
-                 url: "https://github.com/dunesailer/Utilities.git",
-                 from: "2.0.6"),
         .package(name: "Aesthete",
-                 url: "https://github.com/dunesailer/Aesthete.git",
-                 from: "1.2.0"),
+                 url: "https://github.com/btfranklin/Aesthete.git",
+                 from: "1.5.1"),
     ],
     targets: [
         .target(
             name: "Greebler",
             dependencies: [
-                .product(name: "DunesailerUtilities",
-                         package: "Dunesailer Utilities"),
                 .product(name: "Aesthete",
                          package: "Aesthete")]),
         .testTarget(
