@@ -1,7 +1,6 @@
 //  Created by B.T. Franklin on 12/25/20.
 
 import CoreGraphics
-import DunesailerUtilities
 import Aesthete
 
 public struct EquipmentGreebles: Drawable, Codable, Hashable {
@@ -72,9 +71,9 @@ public struct EquipmentGreebles: Drawable, Codable, Hashable {
         let adjustedColor = themeColor.hsbaColor.withBrightness(adjustedBy: 0.1)
         context.setFillColor(CGColor.make(hsbaColor: adjustedColor))
 
-        let itemCount = Bool.random(probability: 80) ? 3 : 5
+        let itemCount = Bool.random(probability: 0.8) ? 3 : 5
         let useRoundItems = Bool.random()
-        let addInnerItem = Bool.random(probability: 80)
+        let addInnerItem = Bool.random(probability: 0.8)
         let innerLineWidth = CGFloat.random(in: 0.001...0.03)
         let innerItemInset = CGFloat.random(in: 0.01...0.05)
         let useInnerDash = Bool.random()
@@ -194,7 +193,7 @@ public struct EquipmentGreebles: Drawable, Codable, Hashable {
             let quadrantWidth = itemRect.width / 2
             let quadrantHeight = itemRect.height / 2
             let useRoundItems = Bool.random()
-            let addInnerItem = Bool.random(probability: 80)
+            let addInnerItem = Bool.random(probability: 0.8)
             let innerLineWidth = CGFloat.random(in: 0.001...0.03)
             let innerItemInset = CGFloat.random(in: 0.01...0.05)
             let useInnerDash = Bool.random()

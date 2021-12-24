@@ -1,7 +1,6 @@
 //  Created by B.T. Franklin on 10/27/19.
 
 import CoreGraphics
-import DunesailerUtilities
 import Aesthete
 
 public struct LightPanelGreebles: Drawable, Codable, Hashable {
@@ -67,7 +66,7 @@ public struct LightPanelGreebles: Drawable, Codable, Hashable {
             for column in 0..<panel.columnCount {
                 for row in 0..<panel.rowCount {
                     
-                    if Bool.random(probability: 33) {
+                    if Bool.random(probability: 0.33) {
 
                         let lightColor = CGColor.make(hsbaColor: lightColors.randomElement()!)
                         context.setFillColor(lightColor)

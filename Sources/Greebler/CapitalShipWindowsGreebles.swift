@@ -82,7 +82,7 @@ public struct CapitalShipWindowsGreebles: Drawable, Codable, Hashable {
 
             for column in 0..<windowZone.columnCount {
                 for row in 0..<windowZone.rowCount {
-                    if Bool.random(probability: 33) {
+                    if Bool.random(probability: 0.33) {
                         let windowX = windowZone.rect.minX + CapitalShipWindowsGreebles.WINDOW_ZONE_INSET
                             + (CGFloat(column) * CapitalShipWindowsGreebles.WINDOW_SIZE)
                             + (CGFloat(column) * CapitalShipWindowsGreebles.WINDOW_SPACING)

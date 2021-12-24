@@ -1,7 +1,6 @@
 //  Created by B.T. Franklin on 10/5/19
 
 import CoreGraphics
-import DunesailerUtilities
 import Aesthete
 
 public struct PipeGreebles: Drawable, Codable, Hashable {

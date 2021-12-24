@@ -1,7 +1,6 @@
 //  Created by B.T. Franklin on 10/8/19.
 
 import CoreGraphics
-import DunesailerUtilities
 import Aesthete
 
 public struct HoseGreebles: Drawable, Codable, Hashable {
