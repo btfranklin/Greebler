@@ -16,7 +16,7 @@ let package = Package(
     dependencies: [
         .package(name: "Aesthete",
                  url: "https://github.com/btfranklin/Aesthete.git",
-                 from: "1.5.1"),
+                 from: "1.6.1"),
     ],
     targets: [
         .target(
